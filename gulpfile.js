@@ -32,7 +32,7 @@ gulp.task('image', function (done) {
 });
 
 gulp.task('js_build', function (done) {
-    return gulp.src('src/js/main.js')
+    return gulp.src('src/js/*.js')
         .pipe(fileinclude())
         .pipe(uglify())
         .pipe(gulp.dest('build/js/'))

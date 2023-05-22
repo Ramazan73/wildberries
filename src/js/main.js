@@ -6,22 +6,6 @@ fetch('https://banners-website.wildberries.ru/public/v1/banners?urltype=1024&app
         });
     });
 
-var swiper = new Swiper('.swiper', {
-    speed: 500,
-    effect: 'fade',
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    loop: true,
-    debugger: true,
-});
-
 const images = [
     { src: 'img/banner-1.png' },
     { src: 'img/banner-2.png' },
