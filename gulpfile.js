@@ -3,6 +3,7 @@ let gulp     = require('gulp'),
     uglify       = require('gulp-uglify'),
     fileinclude = require('gulp-file-include'),
     imagemin = require('gulp-imagemin'),
+    cleanCSS = require('gulp-clean-css'),
     less         = require('gulp-less');
 
 gulp.task('html_build', function (done) {
@@ -16,6 +17,7 @@ gulp.task('html_build', function (done) {
 gulp.task('css_build', function (done) {
     return gulp.src('src/less/main.less')
         .pipe(less())
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('build/css/'))
         .pipe(browserSync.stream());
     done();
